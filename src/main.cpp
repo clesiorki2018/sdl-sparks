@@ -5,12 +5,13 @@
 
 #include "main.h"
 
-int game(int argc, char* argv[]);
+int game(void* data);
 int main(int argc ,char* argv[])
 {
 	int mainRtn = 0;
+	SDL_Thread* thread = 0;
 	try {
-		mainRtn = game(argc, argv);
+		mainRtn = game(0);
 	}
 	catch ( const ErrorInfo& info ) {
 		info.show();
@@ -20,7 +21,7 @@ int main(int argc ,char* argv[])
 	return mainRtn;
 }
 
-int game(int argc, char* argv[])
+int game(void* data)
 {
 	//StringData loading...
 	StringData myText("Common");
@@ -36,8 +37,8 @@ int game(int argc, char* argv[])
 	PictureSurface bg("./images/h3_bg.png", screen);
 
 	//music loading
-	//MusicSound mus("./sounds/bgMusic.mid");
-	//mus.play();
+	MusicSound mus("./sounds/bgMusic.mid");
+	mus.play();
 
 	//UVi Logo
 	UVi_begin(screen);
@@ -64,7 +65,7 @@ int game(int argc, char* argv[])
 	end_show(screen);
 
 	//end music
-	//mus.stop();
+	mus.stop();
 
 	return 0;
 }

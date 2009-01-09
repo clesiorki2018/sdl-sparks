@@ -78,7 +78,7 @@ bool title_loop_quit(const ScreenSurface& screen)
 	TextSurface beginTextOver(myText[8], screen, 215, 195, 122);
 	beginButton.addText(beginTextOff, beginTextOver);
 	TextSurface version("Version 1.04.1", screen, 215, 195, 122, 20);
-	//version.toSolid();
+	version.toSolid();
 	
 	bg.blit(0);
 	gameTitle.blit(title_x, title_y);

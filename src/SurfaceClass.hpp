@@ -4,6 +4,7 @@
 //http://www.cppblog.com/lf426/
 
 //FileName: SurfaceClass.hpp
+//For Windows only
 
 #ifndef SURFACE_CLASS_HPP
 #define SURFACE_CLASS_HPP
@@ -13,7 +14,8 @@
 #include "SDL/SDL.h"
 #include "SDL/SDL_image.h"
 #include "SDL/SDL_ttf.h"
-//#include "SDL_render_Chinese.h"
+//Windows only
+#include "SDL_render_Chinese.h"
 
 class ScreenSurface
 {

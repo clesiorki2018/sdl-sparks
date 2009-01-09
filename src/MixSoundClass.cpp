@@ -47,6 +47,7 @@ EffectSound::EffectSound(const std::string& sound_fileName)
 EffectSound::~EffectSound()
 {
 	Mix_FreeChunk(sound);
+	std::cout << "~EffectSound()\n";
 }
 
 void EffectSound::play() const

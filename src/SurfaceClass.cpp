@@ -3,6 +3,9 @@
 //Laboratory of ZaiBieLiunNian
 //http://www.cppblog.com/lf426/
 
+//FileName: SurfaceClass.cpp
+//For Windows only
+
 #include "SurfaceClass.hpp"
 
 //*****************************************
@@ -80,6 +83,8 @@ BaseSurface::BaseSurface(const BaseSurface& copy):
 pScreen(copy.pScreen)
 {
 	pSurface = SDL_ConvertSurface(copy.pSurface, copy.pSurface->format, SDL_SWSURFACE);
+	if ( pSurface == 0 )
+		throw ErrorInfo(SDL_GetError());
 }
 
 BaseSurface::~BaseSurface()
@@ -91,6 +96,8 @@ BaseSurface& BaseSurface::operator=(const BaseSurface& copy)
 {
 	SDL_FreeSurface(pSurface);
 	pSurface = SDL_ConvertSurface(copy.pSurface, copy.pSurface->format, SDL_SWSURFACE);
+	if ( pSurface == 0 )
+		throw ErrorInfo(SDL_GetError());
 	return *this;
 }
 
@@ -236,7 +243,7 @@ fileName(file_name)
 {
 	SDL_Surface* pSurfaceTemp = IMG_Load(fileName.c_str());
 	if ( pSurfaceTemp == 0 )
-		throw ErrorInfo(SDL_GetError());
+		throw ErrorInfo(IMG_GetError());
 	pSurface = SDL_DisplayFormat(pSurfaceTemp);
 	if ( pSurface == 0 )
 		throw ErrorInfo(SDL_GetError());
@@ -263,7 +270,7 @@ r(_r), g(_g), b(_b)
 {
 	if ( textNum == 0 ){
 		if ( TTF_Init() < 0 ){
-			throw ErrorInfo("TTF_Init() failed!");
+			throw ErrorInfo(TTF_GetError());
 		}
 	}
 
@@ -274,8 +281,8 @@ r(_r), g(_g), b(_b)
 
 	TTF_Font* pFont = TTF_OpenFont(TTF_fileName.c_str(), TTF_size);
 	if ( pFont == 0 )
-		throw ErrorInfo("TTF_OpenFont() failed!");
-	pSurface = TTF_RenderUTF8_Blended(pFont, message.c_str(), textColor);
+		throw ErrorInfo(TTF_GetError());
+	pSurface = myTTF_RenderString_Blended(pFont, message, textColor);
 	if ( pSurface == 0 )
 		throw ErrorInfo(TTF_GetError());
 	TTF_CloseFont(pFont);
@@ -316,10 +323,10 @@ void TextSurface::toBlended()
 
 	TTF_Font* pFont = TTF_OpenFont(TTF_fileName.c_str(), TTF_size);
 	if ( pFont == 0 )
-		throw ErrorInfo("TTF_OpenFont() failed!");
-	pSurface = TTF_RenderUTF8_Blended(pFont, message.c_str(), textColor);
+		throw ErrorInfo(TTF_GetError());
+	pSurface = myTTF_RenderString_Blended(pFont, message, textColor);
 	if ( pSurface == 0 )
-		throw ErrorInfo("myTTF_RenderString_Blended() failed!");
+		throw ErrorInfo(TTF_GetError());
 	TTF_CloseFont(pFont);
 }
 
@@ -334,10 +341,10 @@ void TextSurface::toSolid()
 
 	TTF_Font* pFont = TTF_OpenFont(TTF_fileName.c_str(), TTF_size);
 	if ( pFont == 0 )
-		throw ErrorInfo("TTF_OpenFont() failed!");
-	pSurface = TTF_RenderUTF8_Solid(pFont, message.c_str(), textColor);
+		throw ErrorInfo(TTF_GetError());
+	pSurface = myTTF_RenderString_Solid(pFont, message, textColor);
 	if ( pSurface == 0 )
-		throw ErrorInfo("myTTF_RenderString_Solid() failed!");
+		throw ErrorInfo(TTF_GetError());
 	TTF_CloseFont(pFont);
 }
 
@@ -357,10 +364,10 @@ void TextSurface::toShaded(Uint8 _r, Uint8 _g, Uint8 _b)
 
 	TTF_Font* pFont = TTF_OpenFont(TTF_fileName.c_str(), TTF_size);
 	if ( pFont == 0 )
-		throw ErrorInfo("TTF_OpenFont() failed!");
-	pSurface = TTF_RenderUTF8_Shaded(pFont, message.c_str(), textColor, bgColor);
+		throw ErrorInfo(TTF_GetError());
+	pSurface = myTTF_RenderString_Shaded(pFont, message, textColor, bgColor);
 	if ( pSurface == 0 )
-		throw ErrorInfo("myTTF_RenderString_Shaded() failed!");
+		throw ErrorInfo(TTF_GetError());
 	TTF_CloseFont(pFont);
 }
 
@@ -375,10 +382,10 @@ void TextSurface::setColor(Uint8 _r, Uint8 _g, Uint8 _b)
 
 	TTF_Font* pFont = TTF_OpenFont(TTF_fileName.c_str(), TTF_size);
 	if ( pFont == 0 )
-		throw ErrorInfo("TTF_OpenFont() failed!");
-	pSurface = TTF_RenderUTF8_Blended(pFont, message.c_str(), textColor);
+		throw ErrorInfo(TTF_GetError());
+	pSurface = myTTF_RenderString_Blended(pFont, message, textColor);
 	if ( pSurface == 0 )
-		throw ErrorInfo("myTTF_RenderString_Blended() failed!");
+		throw ErrorInfo(TTF_GetError());
 	TTF_CloseFont(pFont);
 }
 
@@ -394,10 +401,10 @@ void TextSurface::setSize(int ttf_size)
 	TTF_size = ttf_size;
 	TTF_Font* pFont = TTF_OpenFont(TTF_fileName.c_str(), TTF_size);
 	if ( pFont == 0 )
-		throw ErrorInfo("TTF_OpenFont() failed!");
-	pSurface = TTF_RenderUTF8_Blended(pFont, message.c_str(), textColor);
+		throw ErrorInfo(TTF_GetError());
+	pSurface = myTTF_RenderString_Blended(pFont, message, textColor);
 	if ( pSurface == 0 )
-		throw ErrorInfo("myTTF_RenderString_Blended() failed!");
+		throw ErrorInfo(TTF_GetError());
 	TTF_CloseFont(pFont);
 }
 
@@ -413,11 +420,11 @@ void TextSurface::setFont(const std::string& ttf_fileName)
 	TTF_fileName = ttf_fileName;
 	TTF_Font* pFont = TTF_OpenFont(TTF_fileName.c_str(), TTF_size);
 	if ( pFont == 0 )
-		throw ErrorInfo("TTF_OpenFont() failed!");
+		throw ErrorInfo(TTF_GetError());
 
-	pSurface = TTF_RenderUTF8_Blended(pFont, message.c_str(), textColor);
+	pSurface = myTTF_RenderString_Blended(pFont, message, textColor);
 	if ( pSurface == 0 )
-		throw ErrorInfo("myTTF_RenderString_Blended() failed!");
+		throw ErrorInfo(TTF_GetError());
 	TTF_CloseFont(pFont);
 }
 //*************************************

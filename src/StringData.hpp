@@ -4,7 +4,7 @@
 #include <clocale>
 #include <string>
 #include <vector>
-#include "libintl.h"
+#include <libintl.h>
 
 class StringData
 {
