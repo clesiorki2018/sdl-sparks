@@ -1,10 +1,12 @@
 PROJECT (LOVETEST)
 SET(SRC_LIST 
     ButtonClass.cpp 
+    gb2312_to_Unicode.cpp
     main.cpp 
     MixSoundClass.cpp 
     QuestionPage.cpp 
     quit_dialog.cpp 
+    SDL_render_Chinese.cpp 
     StringData.cpp 
     SurfaceClass.cpp 
     UVi_begin.cpp)
@@ -14,5 +16,5 @@ INCLUDE_DIRECTORIES(d:\\mingw\\include\\SDL d:\\gtk\\include)
 SET(CFLAGS -mms-bitfields -mwindows)
 ADD_DEFINITIONS(-D_GNU_SOURCE=1 -Dmain=SDL_main)
 ADD_EXECUTABLE(lovetest ${SRC_LIST})
-TARGET_LINK_LIBRARIES(lovetest mingw32 SDLmain SDL_image SDL_ttf SDL_mixer SDL intl)
+TARGET_LINK_LIBRARIES(lovetest mingw32 SDLmain SDL_image SDL_ttf SDL_mixer SDL intl iconv)
 
