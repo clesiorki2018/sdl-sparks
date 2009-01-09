@@ -1,0 +1,14 @@
+syntax: glob
+
+*.py[co]
+*.swp
+*~
+*.ERR
+*.err
+*.orig
+*.BAK
+*.bak
+*.exe
+*.EXE
+*.dll
+*.DLL

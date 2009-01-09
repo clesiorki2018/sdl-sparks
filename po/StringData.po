@@ -1,0 +1,578 @@
+# Chinese translations for PACKAGE package.
+# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Administrator <EMAIL@ADDRESS>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.00.00\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-04-09 11:53+0800\n"
+"PO-Revision-Date: 2008-04-10 00:38+0800\n"
+"Last-Translator: lf426 <zbln426@163.com>\n"
+"Language-Team: Chinese <zbln426@163.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: CHINA\n"
+
+#: StringData.cpp:11
+#: StringData.cpp:13
+#: StringData.cpp:15
+#: StringData.cpp:17
+#: StringData.cpp:19
+#: StringData.cpp:21
+#: StringData.cpp:23
+#: StringData.cpp:25
+#: StringData.cpp:27
+#: StringData.cpp:157
+#: StringData.cpp:165
+msgid " "
+msgstr ""
+
+#: StringData.cpp:29
+msgid "1.  The end of the world is near, and you have the power"
+msgstr "1.  世界末日来临，你有能力拯救唯一的一种动物，你会拯救？"
+
+#: StringData.cpp:31
+msgid "to save only one kind of animal. What do you save?"
+msgstr " "
+
+#: StringData.cpp:33
+msgid "A.  Sheep"
+msgstr "A.  绵羊"
+
+#: StringData.cpp:35
+msgid "B.  Rabbit"
+msgstr "B.  兔子"
+
+#: StringData.cpp:37
+msgid "C.  Deer"
+msgstr "C.  鹿"
+
+#: StringData.cpp:39
+msgid "D.  Horse"
+msgstr "D.  马"
+
+#: StringData.cpp:41
+msgid "2.  You travel to Africa and visit a tribe, they insist you"
+msgstr "2.  你旅行到非洲的一个部落，他们坚持让你收下一个活"
+
+#: StringData.cpp:43
+msgid "take a live animal as a souvenir. Which one will you choose?"
+msgstr "着的动物做纪念，你会选择？"
+
+#: StringData.cpp:45
+msgid "A.  Lion"
+msgstr "A.  狮子"
+
+#: StringData.cpp:47
+msgid "B.  Monkey"
+msgstr "B.  猴子"
+
+#: StringData.cpp:49
+msgid "C.  Snake"
+msgstr "C.  蛇"
+
+#: StringData.cpp:51
+msgid "D.  Giraffe"
+msgstr "D.  长颈鹿"
+
+#: StringData.cpp:53
+msgid "3.  You did something wrong. God punishes you by turning"
+msgstr "3.  你做了错事，上帝罚你变成一种动物，你想变成什么？"
+
+#: StringData.cpp:55
+msgid "you into an animal of your choice. You decide to become a:"
+msgstr " "
+
+#: StringData.cpp:57
+#: StringData.cpp:117
+msgid "A.  Cat"
+msgstr "A.  猫"
+
+#: StringData.cpp:59
+#: StringData.cpp:95
+msgid "B.  Dog"
+msgstr "B.  狗"
+
+#: StringData.cpp:61
+#: StringData.cpp:121
+msgid "C.  Horse"
+msgstr "C.  马"
+
+#: StringData.cpp:63
+msgid "D.  Snake"
+msgstr "D.  蛇"
+
+#: StringData.cpp:65
+msgid "4.  If you have the power to make one species disappear "
+msgstr "4.  假如你有权力让一个物种永远消失，那个物种是？"
+
+#: StringData.cpp:67
+msgid "forever, which one will that be?"
+msgstr " "
+
+#: StringData.cpp:69
+msgid "A.  Snake"
+msgstr "A.  蛇"
+
+#: StringData.cpp:71
+#: StringData.cpp:119
+msgid "B.  Lion"
+msgstr "B.  狮子"
+
+#: StringData.cpp:73
+msgid "C.  Crocodile"
+msgstr "C.  鳄鱼"
+
+#: StringData.cpp:75
+msgid "D.  Shark"
+msgstr "D.  鲨鱼"
+
+#: StringData.cpp:77
+msgid "5.  If you someday met an animal that could speak in "
+msgstr "5.  假如某天你遇见一个会说话的动物，你希望它是？"
+
+#: StringData.cpp:79
+msgid "human language, you would want that animal to be a..."
+msgstr " "
+
+#: StringData.cpp:81
+msgid "A.  Horse"
+msgstr "A.  马"
+
+#: StringData.cpp:83
+msgid "B.  Sheep"
+msgstr "B.  绵羊"
+
+#: StringData.cpp:85
+msgid "C.  Rabbit"
+msgstr "C.  兔子"
+
+#: StringData.cpp:87
+#: StringData.cpp:99
+msgid "D.  Bird"
+msgstr "D.  鸟"
+
+#: StringData.cpp:89
+msgid "6.  On an isolated island, you can only have an animal"
+msgstr "6.  你在一座孤岛上，只能选一个动物做同伴，你选择？"
+
+#: StringData.cpp:91
+msgid "as you companion. You choose:"
+msgstr " "
+
+#: StringData.cpp:93
+msgid "A.  Pig"
+msgstr "A.  猪"
+
+#: StringData.cpp:97
+msgid "C.  Cow"
+msgstr "C.  奶牛"
+
+#: StringData.cpp:101
+msgid "7.  If you had the power to tame all kinds of animals, "
+msgstr "7.  假如你有能力驯服所有的动物，你会选哪个做你的宠物？"
+
+#: StringData.cpp:103
+msgid "you'll choose what kind of animal to be your pet?"
+msgstr " "
+
+#: StringData.cpp:105
+msgid "A.  White Tiger"
+msgstr "A.  白虎"
+
+#: StringData.cpp:107
+msgid "B.  Dinosaur"
+msgstr "B.  恐龙"
+
+#: StringData.cpp:109
+msgid "C.  Polar Bear"
+msgstr "C.  北极熊"
+
+#: StringData.cpp:111
+msgid "D.  Leopard"
+msgstr "D.  美洲豹"
+
+#: StringData.cpp:113
+msgid "8.  If you could be an animal for 5 minutes, which one "
+msgstr "8.  假如你可以做5分钟的动物，你想做哪个？"
+
+#: StringData.cpp:115
+msgid "you would like to be?"
+msgstr " "
+
+#: StringData.cpp:123
+msgid "D.  Pigeon"
+msgstr "D.  鸽子"
+
+#: StringData.cpp:125
+msgid "Loading..."
+msgstr "装载中..."
+
+#: StringData.cpp:129
+msgid "Next pressed."
+msgstr ""
+
+#: StringData.cpp:131
+msgid "Previous pressed."
+msgstr ""
+
+#: StringData.cpp:133
+msgid "Quit Now?"
+msgstr "确认退出？"
+
+#: StringData.cpp:135
+msgid "Next..."
+msgstr "下一步..."
+
+#: StringData.cpp:137
+msgid "Previous..."
+msgstr "上一步..."
+
+#: StringData.cpp:139
+msgid "Text Button"
+msgstr ""
+
+#: StringData.cpp:141
+msgid "The Keys To Your Heart"
+msgstr "心  之  钥"
+
+#: StringData.cpp:143
+msgid "Copyright 2008 UVi Soft"
+msgstr "2008 有为软件（UVi Soft）版权所有"
+
+#: StringData.cpp:145
+msgid "Begin"
+msgstr "开始"
+
+#: StringData.cpp:147
+msgid "Hand your choice?"
+msgstr "递交选择"
+
+#: StringData.cpp:149
+msgid "Press any key to begin..."
+msgstr "点击任意键开始..."
+
+#: StringData.cpp:153
+msgid "You are attracted to..."
+msgstr "你在现实生活中会被哪一类人所吸引："
+
+#: StringData.cpp:155
+msgid "You are attracted to obedience and warmth."
+msgstr "重视顺从而温暖的人。"
+
+#: StringData.cpp:159
+msgid "You are attracted to those who have a split personality-"
+msgstr "有分裂的人格，外表像冰而内心炽热的人。"
+
+#: StringData.cpp:161
+msgid "cold as ice on the outside but hot as fire in the heart."
+msgstr " "
+
+#: StringData.cpp:163
+msgid "You are attracted to good manners and elegance."
+msgstr "优雅及有礼貌的人。"
+
+#: StringData.cpp:167
+msgid "You are attracted to those who are unbridled, untrammeled,"
+msgstr "不受约束向往自由的人。"
+
+#: StringData.cpp:169
+msgid "and free."
+msgstr " "
+
+#: StringData.cpp:171
+msgid "In love, you feel the most alive when..."
+msgstr "哪种爱的方式最容易使你觉得情不自禁："
+
+#: StringData.cpp:173
+msgid "In love, you feel the most alive when things are straight-"
+msgstr "直来直往，直接地告诉你他爱你。"
+
+#: StringData.cpp:175
+msgid "forward, and you're told that you're loved."
+msgstr " "
+
+#: StringData.cpp:177
+msgid "In love, you feel the most alive when your lover is"
+msgstr "有创造性，从不会让你感到无趣。"
+
+#: StringData.cpp:179
+msgid "creative and never lets you feel bored."
+msgstr " "
+
+#: StringData.cpp:181
+msgid "In love, you feel the most alive when everything is"
+msgstr "心情摇摆不定，忽冷忽热，游移不定。"
+
+#: StringData.cpp:183
+msgid "uncertain, one moment heaven... the next moment hell."
+msgstr " "
+
+#: StringData.cpp:185
+msgid "In love, you feel the most alive when your partner is"
+msgstr "有耐性，对你永远不放弃。"
+
+#: StringData.cpp:187
+msgid "patient and never willing to give up on you."
+msgstr " "
+
+#: StringData.cpp:189
+msgid "You'd like to your lover to think you are..."
+msgstr "你想给爱人什么样的印象："
+
+#: StringData.cpp:191
+msgid "You'd like to your lover to think you are stylish"
+msgstr "有个性的。"
+
+#: StringData.cpp:193
+msgid "and alluring."
+msgstr " "
+
+#: StringData.cpp:195
+msgid "You'd like to your lover to think you are loyal and"
+msgstr "忠诚忠实，永不改变。"
+
+#: StringData.cpp:197
+msgid "faithful... that you'll never change."
+msgstr " "
+
+#: StringData.cpp:199
+msgid "You'd like to your lover to think you are optimistic"
+msgstr "乐观的。"
+
+#: StringData.cpp:201
+msgid "and happy."
+msgstr " "
+
+#: StringData.cpp:203
+msgid "You'd like to your lover to think you are flexible"
+msgstr "有准备和可通融的。"
+
+#: StringData.cpp:205
+msgid "and ready for anything!"
+msgstr " "
+
+#: StringData.cpp:207
+msgid "You would be forced to break up with someone who was..."
+msgstr "你最讨厌的个性中，哪一个会使你与爱人分手："
+
+#: StringData.cpp:209
+msgid "You would be forced to break up with someone who was"
+msgstr "情绪化，太过喜怒无常，而你不知道如何取悦他。"
+
+#: StringData.cpp:211
+msgid "emotional, moody, and difficult to please."
+msgstr " "
+
+#: StringData.cpp:213
+msgid "You would be forced to break up with someone who was "
+msgstr "你的爱人傲慢自大，表现得像一个独裁者。 "
+
+#: StringData.cpp:215
+msgid "arrogant, acting like the dictator of your life. "
+msgstr " "
+
+#: StringData.cpp:217
+msgid "You would be forced to break up with someone who was  "
+msgstr "无情冷血又爱讽刺别人。"
+
+#: StringData.cpp:219
+msgid "ruthless, cold-blooded, and sarcastic."
+msgstr " "
+
+#: StringData.cpp:221
+msgid "You would be forced to break up with someone who was   "
+msgstr "不安全牢靠。"
+
+#: StringData.cpp:223
+msgid "insecure and in constant need of reassurance."
+msgstr " "
+
+#: StringData.cpp:225
+msgid "Your ideal relationship is..."
+msgstr "你想跟你的爱人建立一个什么样的关系："
+
+#: StringData.cpp:227
+msgid "Your ideal relationship is open. Both of you can talk"
+msgstr "你俩能谈任何事情，没有秘密。"
+
+#: StringData.cpp:229
+msgid "about everything... no secrets."
+msgstr " "
+
+#: StringData.cpp:231
+msgid "Your ideal relationship is traditional. Without saying"
+msgstr "你俩不用多说话，用心沟通，对方自然知道你要什么。"
+
+#: StringData.cpp:233
+msgid "anything, both of you communicate with your hearts. "
+msgstr " "
+
+#: StringData.cpp:235
+msgid "Your ideal relationship is comforting. You crave a"
+msgstr "一种让你一直能够感受到温暖与恋爱的关系。"
+
+#: StringData.cpp:237
+msgid "relationship where you always feel warmth and love."
+msgstr " "
+
+#: StringData.cpp:239
+msgid "Your ideal relationship is lasting. You want a relationship"
+msgstr "你和爱人不只关心现在也关心将来，一种你"
+
+#: StringData.cpp:241
+msgid "that looks to the future... one you can grow with."
+msgstr "能与之一起成长的长期关系。"
+
+#: StringData.cpp:243
+msgid "Your risk of cheating is..."
+msgstr "你会有外遇吗："
+
+#: StringData.cpp:245
+msgid "Your risk of cheating is high. You can't resist desire"
+msgstr "你无法抗拒欲望，很有可能会越轨。"
+
+#: StringData.cpp:247
+msgid "and lust."
+msgstr " "
+
+#: StringData.cpp:249
+msgid "Your risk of cheating is zero. You care about society"
+msgstr "你重视社会跟道德规范，婚后你不会犯这样的错。"
+
+#: StringData.cpp:251
+msgid "and morality. You would never break a commitment."
+msgstr " "
+
+#: StringData.cpp:253
+msgid "Your risk of cheating is low. Even if you're tempted,"
+msgstr "你不会主动，也不会拒绝，但你会很努力试着不要这样做。"
+
+#: StringData.cpp:255
+msgid "you'd try hard not to do it."
+msgstr " "
+
+#: StringData.cpp:257
+msgid "Your risk of cheating is 100%. You are not suited for a"
+msgstr "你从来就不够坚定，事实上，"
+
+#: StringData.cpp:259
+msgid "monogamous relationship."
+msgstr "你不适合婚姻，且你不想做承诺。"
+
+#: StringData.cpp:261
+msgid "You think of marriage..."
+msgstr "你对婚姻的看法："
+
+#: StringData.cpp:263
+msgid "You think of marriage as something precious. You'll"
+msgstr "你认为婚姻是件很珍贵的事，一旦结婚，"
+
+#: StringData.cpp:265
+msgid "treasure marriage and treat it as sacred."
+msgstr "你会很珍惜婚姻及你的伴侣。"
+
+#: StringData.cpp:267
+msgid "You think of marriage pessimistically. You don't think"
+msgstr "你非常消极，你不认为有快乐婚姻的存在。"
+
+#: StringData.cpp:269
+msgid "happy marriages exist anymore."
+msgstr " "
+
+#: StringData.cpp:271
+msgid "You think of marriage as something that will confine you."
+msgstr "你害怕婚姻，你认为婚姻会夺走你的自由。"
+
+#: StringData.cpp:273
+msgid "You are afraid of marriage."
+msgstr " "
+
+#: StringData.cpp:275
+msgid "You think of marriage something you've always wanted..."
+msgstr "你一直想要结婚，但事实上，"
+
+#: StringData.cpp:277
+msgid "though you haven't really thought about it."
+msgstr "你甚至不知道婚姻到底是什么。"
+
+#: StringData.cpp:279
+msgid "In this moment, you think of love as..."
+msgstr "此刻你对爱情的看法："
+
+#: StringData.cpp:281
+msgid "In this moment, you think of love as something you can"
+msgstr "你非常以自我为中心，认为爱情对你是可以"
+
+#: StringData.cpp:283
+msgid "get or discard anytime. You're feeling self centered."
+msgstr "轻易得到和放弃的东西。"
+
+#: StringData.cpp:285
+msgid "In this moment, you think of love as something you thirst for."
+msgstr "你总是渴望爱情，能为爱情做任何事，"
+
+#: StringData.cpp:287
+msgid "You'll do anything for love, but you won't fall for it easily."
+msgstr "但你不会轻易坠入情网。"
+
+#: StringData.cpp:289
+msgid "In this moment, you think of love as something you don't need."
+msgstr "你不想被固定的关系绑住，你只想处处调情。"
+
+#: StringData.cpp:291
+msgid "You just feel like flirting around and playing right now. "
+msgstr " "
+
+#: StringData.cpp:293
+msgid "In this moment, you think of love as commitment."
+msgstr "你认为爱情是二人互相的承诺。"
+
+#: StringData.cpp:295
+msgid "Love only works when both people are totally devoted."
+msgstr " "
+
+#: StringData.cpp:297
+msgid "Restart"
+msgstr "重选"
+
+#: StringData.cpp:299
+msgid "End"
+msgstr "结束"
+
+#: StringData.cpp:303
+msgid "CREDITS"
+msgstr "制作人员"
+
+#: StringData.cpp:305
+msgid "Created by"
+msgstr "作者"
+
+#: StringData.cpp:307
+msgid "Long Fei"
+msgstr "龙飞"
+
+#: StringData.cpp:309
+msgid "E-mail: zbln426@163.com"
+msgstr "电子邮箱： zbln426@163.com"
+
+#: StringData.cpp:311
+msgid "Laboratory of ZaiBieLiuNian"
+msgstr "再别流年的技术实验室"
+
+#: StringData.cpp:313
+msgid "http://www.cppblog.com/lf426/"
+msgstr "http://www.cppblog.com/lf426/"
+
+#: StringData.cpp:315
+msgid "2008 UVi Soft"
+msgstr "2008 有为软件（UVi Soft）"
+
+#: StringData.cpp:319
+msgid "NULL"
+msgstr ""
+

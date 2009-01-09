@@ -1,0 +1,18 @@
+PROJECT (LOVETEST)
+SET(SRC_LIST 
+    ButtonClass.cpp 
+    main.cpp 
+    MixSoundClass.cpp 
+    QuestionPage.cpp 
+    quit_dialog.cpp 
+    StringData.cpp 
+    SurfaceClass.cpp 
+    UVi_begin.cpp)
+#MESSAGE(STATUS "This is SOURCE dir " ${HELLO_SOURCE_DIR})
+LINK_DIRECTORIES(d:\\mingw\\lib d:\\gtk\\lib)
+INCLUDE_DIRECTORIES(d:\\mingw\\include\\SDL d:\\gtk\\include)
+SET(CFLAGS -mms-bitfields -mwindows)
+ADD_DEFINITIONS(-D_GNU_SOURCE=1 -Dmain=SDL_main)
+ADD_EXECUTABLE(lovetest ${SRC_LIST})
+TARGET_LINK_LIBRARIES(lovetest mingw32 SDLmain SDL_image SDL_ttf SDL_mixer SDL intl)
+
