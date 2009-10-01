@@ -1,0 +1,15 @@
+SDL_Surface *flip_surface( SDL_Surface *surface, int flags )
+{
+    //Pointer to the soon to be flipped surface
+    SDL_Surface *flipped = NULL;
+    
+    //If the image is color keyed
+    if( surface->flags & SDL_SRCCOLORKEY )
+    {
+        flipped = SDL_CreateRGBSurface( SDL_SWSURFACE, surface->w, surface->h, surface->format->BitsPerPixel, surface->format->Rmask, surface->format->Gmask, surface->format->Bmask, 0 );
+    }
+    //Otherwise
+    else
+    {
+        flipped = SDL_CreateRGBSurface( SDL_SWSURFACE, surface->w, surface->h, surface->format->BitsPerPixel, surface->format->Rmask, surface->format->Gmask, surface->format->Bmask, surface->format->Amask );
+    }
