@@ -16,3 +16,7 @@ syntax: glob
 *.EXE
 *.dll
 *.DLL
+.DS_Store
+sdl
+
+
