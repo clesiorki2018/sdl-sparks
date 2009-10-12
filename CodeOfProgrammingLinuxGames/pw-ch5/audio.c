@@ -51,7 +51,7 @@ void InitAudio()
 	fprintf(stderr, "Got a device.\n");
     audio_context = alcCreateContext(audio_device, NULL);
 
-    err = alcGetError();
+    err = alcGetError(audio_device);
     if (err != ALC_NO_ERROR || audio_context == NULL) {
 	fprintf(stderr, "Unable to create an OpenAL context (%s). Audio disabled.\n", alGetString(err));
 	return;
@@ -64,7 +64,7 @@ void InitAudio()
        of all OpenAL API calls. Some calls will even segfault if there isn't
        a valid current context. */
     alcMakeContextCurrent(audio_context);
-    if (alcGetError() != ALC_NO_ERROR) {
+    if (alcGetError(audio_device) != ALC_NO_ERROR) {
 	fprintf(stderr, "Unable to make OpenAL context current. Audio disabled.\n");
 	goto error_cleanup;
     }

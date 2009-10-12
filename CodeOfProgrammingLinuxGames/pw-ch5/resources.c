@@ -81,6 +81,7 @@ void LoadGameData(void)
 
     /* Load sound data. */
     if (audio_enabled) {
+#if 1
 	if (LoadSoundFile("engine.wav", &engine_sound) != 0) {
 	    printf("Unable to load engine.wav.\n");
 	    exit(1);
@@ -90,6 +91,7 @@ void LoadGameData(void)
 	    printf("Unable to load phaser.wav.\n");
 	    exit(1);
 	}
+#endif
     }
 }
 
@@ -125,28 +127,36 @@ int LoadSoundFile(char *filename, sound_p sound)
     u_int8_t *buffer_8 = NULL;
     int16_t *buffer_16 = NULL;
     unsigned int i;
+    int pcmbitwidth = 0;
 
     /* Open the file and retrieve sample information. */
-    file = sf_open_read(filename, &file_info);
+    memset(&file_info, 0, sizeof(file_info));
+    file = sf_open(filename,SFM_READ, &file_info);
     if (file == NULL) {
-	printf("Unable to open '%s'.\n", filename);
+	fprintf(stderr, "Unable to open '%s'.\n", filename);
 	return -1;
     }
+	fprintf(stderr, "Unable to open");
 	
+    pcmbitwidth = (file_info.format & SF_FORMAT_TYPEMASK) * 8;
     /* Make sure the format is acceptable. */
+#if 0
     if ((file_info.format & 0x0F) != SF_FORMAT_PCM) {
 	printf("'%s' is not a PCM-based audio file.\n", filename);
 	sf_close(file);
 	return -1;
     }
-	
-    if ((file_info.pcmbitwidth == 8) && (file_info.channels == 1)) {
+#endif	
+    fprintf(stderr, "format: 0x%x\t", file_info.format);
+    fprintf(stderr, "channels: %d\t", file_info.channels);
+    fprintf(stderr, "pcmbitwidth: %d\n", pcmbitwidth);
+    if ((pcmbitwidth == 8) && (file_info.channels == 1)) {
 	sound->format = AL_FORMAT_MONO8;
-    } else if ((file_info.pcmbitwidth == 8) && (file_info.channels == 2)) {
+    } else if ((pcmbitwidth == 8) && (file_info.channels == 2)) {
 	sound->format = AL_FORMAT_STEREO8;
-    } else if ((file_info.pcmbitwidth == 16) && (file_info.channels == 1)) {
+    } else if ((pcmbitwidth == 16) && (file_info.channels == 1)) {
 	sound->format = AL_FORMAT_MONO16;
-    } else if ((file_info.pcmbitwidth == 16) && (file_info.channels == 2)) {
+    } else if ((pcmbitwidth == 16) && (file_info.channels == 2)) {
 	sound->format = AL_FORMAT_STEREO16;
     } else {
 	printf("Unknown sample format in %s.\n", filename);
@@ -155,13 +165,13 @@ int LoadSoundFile(char *filename, sound_p sound)
     }
 	
     /* Allocate buffers. */
-    buffer_short = (short *)malloc(file_info.samples *
+    buffer_short = (short *)malloc(file_info.frames *
 				   file_info.channels * 
 				   sizeof (short));
 
-    buffer_8 = (u_int8_t *)malloc(file_info.samples *
+    buffer_8 = (u_int8_t *)malloc(file_info.frames *
 				  file_info.channels *
-				  file_info.pcmbitwidth / 8);
+				  pcmbitwidth / 8);
 
     buffer_16 = (int16_t *)buffer_8;
 
@@ -171,14 +181,14 @@ int LoadSoundFile(char *filename, sound_p sound)
     }
 
     /* Read the entire sound file. */
-    if (sf_readf_short(file,buffer_short,file_info.samples) == (size_t)-1) {
+    if (sf_readf_short(file,buffer_short,file_info.frames) == (size_t)-1) {
 	printf("Error while reading samples from '%s'.\n", filename);
 	goto error_cleanup;
     }
 	
     /* Convert the data to the correct format. */
-    for (i = 0; i < file_info.samples * file_info.channels; i++) {
-	if (file_info.pcmbitwidth == 8) {
+    for (i = 0; i < file_info.frames * file_info.channels; i++) {
+	if (pcmbitwidth == 8) {
 	    /* Convert the sample from a signed short to an unsigned byte */
 	    buffer_8[i] = (u_int8_t)((short)buffer_short[i] + 128);
 	} else {
@@ -188,11 +198,12 @@ int LoadSoundFile(char *filename, sound_p sound)
 	
     /* Fill in the sound data structure. */
     sound->freq = file_info.samplerate;
-    sound->size = file_info.samples * file_info.channels *
-	file_info.pcmbitwidth / 8;
+    sound->size = file_info.frames * file_info.channels * pcmbitwidth / 8;
 
     /* Give our sound data to OpenAL. */
-    alGenBuffers(1, &sound->name);
+    ALuint ** uiPtr;
+    *uiPtr = &sound->name;
+    alGenBuffers(1, *uiPtr);
     if (alGetError() != AL_NO_ERROR) {
 	printf("Error creating an AL buffer name for %s.\n", filename);
 	goto error_cleanup;
@@ -212,7 +223,7 @@ int LoadSoundFile(char *filename, sound_p sound)
     return 0;
 
  error_cleanup:
-    if (file != NULL) fclose(file);
+    if (file != NULL) sf_close(file);
     free(buffer_short);
     free(buffer_8);
     return -1;

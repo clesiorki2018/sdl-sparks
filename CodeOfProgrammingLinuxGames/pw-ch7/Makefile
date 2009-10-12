@@ -1,5 +1,5 @@
-CFLAGS=-W -Wall -ggdb `sdl-config --cflags`
-LIBS=-lm `sdl-config --libs` -ltcl8.3
+CFLAGS=-W -Wall -ggdb `sdl-config --cflags` -I/usr/include/tcl8.4
+LIBS=-lm `sdl-config --libs` -ltcl8.4
 OBJS=main.o particle.o background.o resources.o scripting.o network.o
 CC=gcc
 
