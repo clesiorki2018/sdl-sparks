@@ -1,0 +1,10 @@
+PROJECT (plg)
+SET(SRC_LIST test.c)
+#MESSAGE(STATUS "This is SOURCE dir " ${HELLO_SOURCE_DIR})
+LINK_DIRECTORIES(d:\\mingw\\lib)
+INCLUDE_DIRECTORIES(d:\\mingw\\include\\SDL)
+SET(CFLAGS -mms-bitfields -mwindows)
+ADD_DEFINITIONS(-D_GNU_SOURCE=1 -Dmain=SDL_main)
+ADD_EXECUTABLE(plg ${SRC_LIST})
+TARGET_LINK_LIBRARIES(plg mingw32 SDLmain SDL_image SDL_net SDL)
+
